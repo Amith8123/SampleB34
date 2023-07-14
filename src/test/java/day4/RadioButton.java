@@ -18,13 +18,24 @@ public class RadioButton {
 //		if(!optchk.isSelected()) {
 //			optchk.click();
 //	}
-		driver.get("http://demo.seleniumeasy.com/basic-select-dropdown-demo.html");
-	driver.manage().window().maximize();
-	//driver.wait(5);
-		Select sel=new Select(driver.findElement(By.id("//select[@id='select-demo']")));
-	sel.selectByVisibleText("Wednesday");
-	sel.deselectByVisibleText("Wednesday");
-	System.out.println(sel);
+//		driver.get("http://demo.seleniumeasy.com/basic-select-dropdown-demo.html");
+//	driver.manage().window().maximize();
+//	//driver.wait(5);
+//		Select sel=new Select(driver.findElement(By.id("//select[@id='select-demo']")));
+//	sel.selectByVisibleText("Wednesday");
+//	sel.deselectByVisibleText("Wednesday");
+//	System.out.println(sel);
+//	driver.close();
+	
+	driver.get("http://demo.seleniumeasy.com/table-sort-search-demo.html");
+    String ofc= driver.findElement(By.xpath("//td[contains(text(), 'B. Wagner')]//following-sibling::td[2]")).getText();
+	System.out.println(ofc);
+	
+	driver.get("http://demo.seleniumeasy.com/table-sort-search-demo.html");
+    //String ofc= driver.findElement(By.xpath("//td[contains(text(), 'B. Wagner')]//following-sibling::td[2]")).getText();
+	System.out.println(ofc);
+	
+	
 	driver.close();
 	
 	}
